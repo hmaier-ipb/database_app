@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv=“pragma“ content=“no-cache“>
+  <meta http-equiv=“expires“ content=“0″>
+  <link rel="stylesheet" href="include/css/style.css" type="text/css" >
+  <script src="include/js/ajax.js"></script>
+  <title>Database-App1</title>
+</head>
+<body>
+  <div id="input">
+    <br>
+    <form method="POST" action="index.php">
+      <h2>INSERT NEW DATA</h2>
+      <pre>Name:        <input name="name" id="name"></pre><br>
+      <pre>Age:         <input name="age" id="age"></pre><br>
+      <pre>Hometown:    <input name="hometown" id="hometown"></pre>
+      <pre>isMale:      TRUE<input name="isMale" type="radio" value="true"> FALSE<input name="isMale" type="radio" value="false">
+      </pre>
+      <p><button name="submit_input">Submit</button></p>
+    </form>
+    <br>
+    <form method="post" action="index.php">
+      <h2>DELETE</h2>
+      <p>Select Row ID: <input name="row_id" id="row_id"></p>
+      <pre>
+to delete all:
+type "all" into input.
+press delete
+without any input
+to delete the last entry
+      </pre>
+      <p><button name="submit_row_id">Delete</button></p>
+    </form>
+    <br>
+    <form method="POST" action="index.php">
+      <h2>DEMO DATA</h2>
+      <p>Insert Demo-Data into Database: </p>
+      <p><button name="submit_demo" id="submit_demo">Insert</button></p>
+    </form>
+    <br>
+    <form method="POST" action="index.php">
+      <h2>CHANGE DATA</h2>
+
+      <p><label>Select Row ID:</label> <!--{$dropdown_id}--> </p>
+      <p><label>Select Attribute:</label>
+        <select name="select_attribute">
+          <option value="name">name</option>
+          <option value="age">age</option>
+          <option value="hometown">hometown</option>
+          <option value="isMale">isMale</option>
+        </select></p>
+      <p>Change Value: <input name="change_value">  </p>
+
+      <p><button name="change_button">Change</button></p>
+    </form>
+  </div>
+  <div id="output">
+    <!--{$output}-->
+  </div>
+</body>
+</html>
